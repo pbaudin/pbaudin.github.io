@@ -5,7 +5,7 @@
 /*                                                                               */
 /* MIT License                                                                   */
 /*                                                                               */
-/* Copyright (C) 2017-2021, Patrick Baudin (https://github.com/pbaudin/ACSF)     */
+/* Copyright (C) 2017-2023, Patrick Baudin (https://github.com/pbaudin/ACSF)     */
 /*                                                                               */
 /* Permission is hereby granted, free of charge, to any person obtaining a copy  */
 /* of this software and associated documentation files (the "Software"), to deal */
@@ -205,6 +205,8 @@ function textLaRose(msg1){
     widthFORCE(21);
     var count="______\n";
     switch(msg1.className) {
+    case "Honorable": case "HonorableLight":
+        sizeTEXT(msg1,2);sizeTEXT(msg2,4);sizeTEXT(msg3,5);sizeTEXT(msg4,1); break;
     case "Gallant": case "GallantLight":
         count="__" + count;
         sizeTEXT(msg1,2);sizeTEXT(msg2,4);sizeTEXT(msg3,5);sizeTEXT(msg4,1); break;
@@ -611,7 +613,7 @@ function fontACTION(font){
     case "Expressive": case "ExpressiveLight": percent="90%";  break;
     case "Festive": case "FestiveLight": break;
     case "Gallant": case "GallantLight":
-    case "H": case "HLight":
+    case "Honorable": case "HonorableLight":
     case "I": case "ILight":  percent="100%"; break;
     default: size=85; percent="110%";  break;
     }
